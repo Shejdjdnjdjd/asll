@@ -33,13 +33,13 @@ close_key = InlineKeyboardMarkup(
 buttons = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="▷", callback_data="resume_cb"),
-            InlineKeyboardButton(text="ll", callback_data="pause_cb"),
-            InlineKeyboardButton(text="‣‣I", callback_data="skip_cb"),
-            InlineKeyboardButton(text="▢", callback_data="end_cb"),
+            InlineKeyboardButton(text="كمل", callback_data="resume_cb"),
+            InlineKeyboardButton(text="ايقاف مؤقت", callback_data="pause_cb"),
+            InlineKeyboardButton(text="تخطي", callback_data="skip_cb"),
+            InlineKeyboardButton(text="ايقاف", callback_data="end_cb"),
             ],
             [
-            InlineKeyboardButton("⦓ ᥉᥆ᥙᖇᥴᥱ ƚᥱƚ᥆ ⦔", url=f"https://t.me/T7_AU"),
+            InlineKeyboardButton("Source alise", url=f"https://t.me/F6LLL"),
         ]
     ]
 )
@@ -48,18 +48,18 @@ buttons = InlineKeyboardMarkup(
 pm_buttons = [
     [
         InlineKeyboardButton(
-            text="‹ اضف البوت في مجموعتك ›",
+            text=". اضف البوت لـ مجموعتك •",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         )
     ],
-    [InlineKeyboardButton(text="• اوامࢪ التشغيل •", callback_data="fallen_help")],
+    [InlineKeyboardButton(text=" اوامر التشغيل •", callback_data="fallen_help")],
     [
-        InlineKeyboardButton(text="• سوࢪس تيـتو •", url=config.SUPPORT_CHANNEL),
-        InlineKeyboardButton(text="• جࢪوب الدعم •", url=config.SUPPORT_CHAT),
+        InlineKeyboardButton(text="• سووس اليس •", url=config.SUPPORT_CHANNEL),
+        InlineKeyboardButton(text="• Source alise •", url=config.SUPPORT_CHAT),
     ],
     [
         InlineKeyboardButton(
-            text="• مطوࢪ السورس •", url="https://t.me/G_7_Rr"
+            text="• مطور السورس •", url="https://t.me/iFakhm"
         ),
         InlineKeyboardButton(text="• مالك البوت •", user_id=config.OWNER_ID),
     ],
@@ -69,17 +69,17 @@ pm_buttons = [
 gp_buttons = [
     [
         InlineKeyboardButton(
-            text="‹ اضف البوت في مجموعتك ›",
+            text=". اضف البوت في مجموعتك •",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         )
     ],
     [
-        InlineKeyboardButton(text="• سوࢪس تيـتو •", url=config.SUPPORT_CHANNEL),
-        InlineKeyboardButton(text="• جࢪوب الدعم •", url=config.SUPPORT_CHAT),
+        InlineKeyboardButton(text="• Source alise •", url=config.SUPPORT_CHANNEL),
+        InlineKeyboardButton(text="• Source alise •", url=config.SUPPORT_CHAT),
     ],
     [
         InlineKeyboardButton(
-            text="• مطوࢪ السورس •", url="https://t.me/G_7_Rr"
+            text="• مطور السورس •", url="https://t.me/IfAkhm"
         ),
         InlineKeyboardButton(text="• مالك البوت •", user_id=config.OWNER_ID),
     ],
@@ -89,25 +89,25 @@ gp_buttons = [
 helpmenu = [
     [
         InlineKeyboardButton(
-            text="• اوامࢪ التشغيل •",
+            text="• اوامر التشغيل •",
             callback_data="fallen_cb help",
         )
     ],
     [
-        InlineKeyboardButton(text="• اوامࢪ المطور •", callback_data="fallen_cb sudo"),
-        InlineKeyboardButton(text="• اوامࢪ المالك •", callback_data="fallen_cb owner"),
+        InlineKeyboardButton(text="• اوامر المطور •", callback_data="fallen_cb sudo"),
+        InlineKeyboardButton(text="• اوامر المالك •", callback_data="fallen_cb owner"),
     ],
     [
-        InlineKeyboardButton(text="• ࢪجوع •", callback_data="fallen_home"),
+        InlineKeyboardButton(text="• رجوع •", callback_data="fallen_home"),
         InlineKeyboardButton(text="• مسح •", callback_data="close"),
     ],
 ]
 
 
 help_back = [
-    [InlineKeyboardButton(text="• جࢪوب الدعم •", url=config.SUPPORT_CHAT)],
+    [InlineKeyboardButton(text="• Source alise •", url=config.SUPPORT_CHAT)],
     [
-        InlineKeyboardButton(text="• ࢪجوع •", callback_data="fallen_help"),
+        InlineKeyboardButton(text="• رجوع •", callback_data="fallen_help"),
         InlineKeyboardButton(text="• مسح •", callback_data="close"),
     ],
 ]
