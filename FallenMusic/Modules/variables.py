@@ -29,13 +29,13 @@ from FallenMusic import BOT_NAME, app
 
 
 @app.on_message(
-    filters.command(["config", "variables"]) | filters.command(["الحاجات","الفارات","الايبهات","كونفنج"],prefixes= ["/", "!","","#"]) & filters.user(config.OWNER_ID)
+    filters.command(["config", "variables"]) | filters.command(["معلومات التنصيب","الفارات","الايبهات","العملومات"],prefixes= ["/", "!","","#"]) & filters.user(config.OWNER_ID)
 )
 async def get_vars(_, message: Message):
     try:
         await app.send_message(
             chat_id=int(config.OWNER_ID),
-            text=f"""<u>**{BOT_NAME} ᴄᴏɴғɪɢ ᴠᴀʀɪᴀʙʟᴇs :**</u>
+            text=f"""<u>**{BOT_NAME} معلومات التنصيب :**</u>
 
 **ايبي ايدي :** `{config.API_ID}`
 **ايبي هاش :** `{config.API_HASH}`
@@ -46,16 +46,15 @@ async def get_vars(_, message: Message):
 **ايدي المالك :** `{config.OWNER_ID}`
 **سودو يوزر :** `{config.SUDO_USERS}`
 
-**بنج :** `{config.PING_IMG}`
-**بدأ :** `{config.START_IMG}`
-**جروب الدعم :** `{config.SUPPORT_CHAT}`
+**بنق :** `{config.PING_IMG}`
+**بدء :** `{config.START_IMG}`
 
 **الجلسة :** `{config.SESSION}`""",
             disable_web_page_preview=True,
         )
     except:
-        return await message.reply_text("⎊ فشل في إرسال متغيرات التكوين .")
+        return await message.reply_text("• فشل في إرسال متغيرات التكوين .")
     if message.chat.type != ChatType.PRIVATE:
         await message.reply_text(
-            "⎊ ᴘʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴘᴍ, ɪ'ᴠᴇ sᴇɴᴛ ᴛʜᴇ ᴄᴏɴғɪɢ ᴠᴀʀɪᴀʙʟᴇs ᴛʜᴇʀᴇ."
+            "• 𝒃𝒐𝒕 𝒂𝒍𝒊𝒄𝒆"
         )
