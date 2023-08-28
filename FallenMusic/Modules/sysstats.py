@@ -39,7 +39,7 @@ from FallenMusic.Modules import ALL_MODULES
 @app.on_message(filters.command(["stats", "sysstats"]) | filters.command(["الحاله","الاحصائيات"],prefixes= ["/", "!","","#"]) & SUDOERS)
 async def sys_stats(_, message: Message):
     sysrep = await message.reply_text(
-        f"ɢᴇᴛᴛɪɴɢ {BOT_NAME} sʏsᴛᴇᴍ sᴛᴀᴛs, ɪᴛ'ʟʟ ᴛᴀᴋᴇ ᴀ ᴡʜɪʟᴇ..."
+        f"حسنًا انتظر قليلا {BOT_NAME} يتم جلب الاحصائيات..."
     )
     try:
         await message.delete()
@@ -63,7 +63,7 @@ async def sys_stats(_, message: Message):
         else:
             cpu_freq = f"{round(cpu_freq, 2)}ᴍʜᴢ"
     except:
-        cpu_freq = "ғᴀɪʟᴇᴅ ᴛᴏ ғᴇᴛᴄʜ"
+        cpu_freq = "• 𝒃𝒐𝒕 𝒂𝒍𝒊𝒄𝒆"
     hdd = psutil.disk_usage("/")
     total = hdd.total / (1024.0**3)
     total = str(total)
@@ -76,7 +76,7 @@ async def sys_stats(_, message: Message):
 
     await sysrep.edit_text(
         f"""
-⎊ <u>**{BOT_NAME} احصائيات النظام **</u>
+• <u>**{BOT_NAME} احصائيات بوتك **</u>
 
 **بايثون :** {pyver.split()[0]}
 **بايروجرام :** {pyrover}
@@ -93,7 +93,7 @@ async def sys_stats(_, message: Message):
 **إصدار المنصة :** {platform_release}
 **إصدار المنصة :** {platform_version}
 
-        <b><u>sᴛᴏʀᴀɢᴇ</b><u/>
+        <b><u>• 𝒃𝒐𝒕 𝒂𝒍𝒊𝒄𝒆</b><u/>
 **متاح :** {total[:4]} ɢɪʙ
 **مستخدم :** {used[:4]} ɢɪʙ
 **حر :** {free[:4]} ɢɪʙ
