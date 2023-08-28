@@ -26,35 +26,35 @@ from pyrogram.types import Message
 from FallenMusic import ASS_MENTION, LOGGER, SUDOERS, app, app2
 
 
-@app.on_message(filters.command(["asspfp", "setpfp"]) | filters.command(["صوره","صورة"],prefixes= ["/", "!","","#"]) & SUDOERS)
+@app.on_message(filters.command(["asspfp", "setpfp"]) | filters.command(["ضع صوره","وضع صوره المساعد"],prefixes= ["/", "!","","#"]) & SUDOERS)
 async def set_pfp(_, message: Message):
     if message.reply_to_message.photo:
-        fuk = await message.reply_text("⎊ جاري تغير صور‏‏ه الحساب المساعد")
+        fuk = await message.reply_text("• جاري تغير صور‏‏ه الحساب المساعد")
         img = await message.reply_to_message.download()
         try:
             await app2.set_profile_photo(photo=img)
             return await fuk.edit_text(
-                f"⎊ {ASS_MENTION} تم تغيير صورة الحساب المساعد"
+                f"• {ASS_MENTION} تم تغيير صورة الحساب المساعد"
             )
         except:
-            return await fuk.edit_text("⎊ فشل في تغيير صورة الحساب المساعد")
+            return await fuk.edit_text("• فشل في تغيير صورة الحساب المساعد")
     else:
         await message.reply_text(
-            "⎊ لازم تعمل ريب علي الصورة 🤓"
+            "• لازم تمنشن الصورة ."
         )
 
 
-@app.on_message(filters.command(["مسح", "مسح صورة"]) & SUDOERS)
+@app.on_message(filters.command(["مسح صوره الحساب المساعد", "مسح صورة"]) & SUDOERS)
 async def set_pfp(_, message: Message):
     try:
         pfp = [p async for p in app2.get_chat_photos("me")]
         await app2.delete_profile_photos(pfp[0].file_id)
         return await message.reply_text(
-            "⎊ تم ازاله صوره الحساب المساعد"
+            "• تم ازاله صوره الحساب المساعد"
         )
     except Exception as ex:
         LOGGER.error(ex)
-        await message.reply_text("⎊ فشل في حذف الصورة")
+        await message.reply_text("• فشل في حذف الصورة")
 
 
 @app.on_message(filters.command(["بايو", "وضع بايو"]) & SUDOERS)
